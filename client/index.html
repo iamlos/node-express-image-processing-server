@@ -6,7 +6,10 @@
 </head>
 
 <body>
-  <form enctype="multipart/form-data" action="/upload"></form>
+  <form method="post" enctype="multipart/form-data" action="/upload">
+    <input class="file-input" type="file" name="photo">
+    <input class="submit-button" type="submit" value="Submit">
+  </form>
 </body>
 
 </html>
