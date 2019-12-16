@@ -53,7 +53,7 @@ const imageProcessor = (filename) => {
                 });
 
                 monochromeWorker.on('message', (message) => {
-                    monochromeWorderFinished = true;
+                    monochromeWorkerFinished = true;
                     if (resizeWorkerFinished) {
                         resolve('monochromeWorker finished processing');
                     }
