@@ -21,7 +21,7 @@ const fileFilter = (req, file, callback) => {
 const upload = multer({ fileFilter, storage });
 
 router.post('/upload', upload.single('photo'), (request, response) => {
-    if (request.hasOwnProperty('fileValidationError')) {
+    if (request.fileValidationError) {
         return response.status(400).json({ error: request.fileValidationError });
     }
 
