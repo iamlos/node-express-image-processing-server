@@ -8,7 +8,8 @@ In the `index.html` file inside the `client` directory, we are going to add a `f
 TASK 2:
 Let's add some attributes to our `form` tag. Add a `method` of `'post'` to the 
 `form`. Add an `enctype` attribute with the string `'multipart/form-data'` to 
-the `form` tag. Add an `action` attribute with the string `'/upload'`. 
+the `form` tag. Add an `action` attribute with the string `'/upload'`. Note: In this
+project all HTML attribute values must have no spaces in them. 
 
 ## Add an input
 TASK 3:
@@ -29,7 +30,10 @@ object.
 
 ## Respond with the form
 Task 6:
-Right above our `module.exports` line, let's define a constant `pathToIndex` to represent the path to our `index.html` file. Call `path.resolve()`, and assign to it the constant we just created. Let's pass `__dirname` as the first argument, and a string value of `'../client/index.html'` as the second argument. Let's call the `use()` method of our `app`. 
+Right above our `module.exports` line, let's define a constant `pathToIndex` to represent the path to our `index.html` file. Call `path.resolve()`, and assign it to the constant we just created. Let's pass `__dirname` as the first argument, and a string value of `'../client/index.html'` as the second argument. 
+
+
+Let's call the `use()` method of our `app`. 
 For the _route_ argument, let's pass a string of `'/*'`. For the route handler, 
 we will pass an anonymous function that takes two parameters, `request` and 
 `response` in that order. Our route handler should call the `sendFile()` method 
